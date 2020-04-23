@@ -26,5 +26,5 @@
 <h3 align="center">Installation</h3>
 
 <p align="center">
-wget -O AutoScriptVPS https://git.io/fhnDO && chmod +x AutoScriptVPS && ./AutoScriptVPS
+wget -O AutoScriptVPS https://raw.githubusercontent.com/Gugun09/AutoScriptVps/master/AutoScriptVPS && chmod +x AutoScriptVPS && ./AutoScriptVPS
 </p>
