@@ -56,7 +56,7 @@ wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Gugun09/AutoScr
 mkdir -p /home/vps/public_html
 echo "<h1><center>AutoScriptVPS by Gugun09</center></h1>" > /home/vps/public_html/index.html
 echo "<h3><center>For More Info Visit My <a href="https://github.com/Gugun09">Github Repositories</a></center><h3>" >> /home/vps/public_html/index.html
-echo "<h3><center>You Can Also Contact Me at <a href="https://www.facebook.com/143Clarkz">Facebook</a> and <a href="https://twitter.com/143Gugun09">Twitter</a></center></h3>" >> /home/vps/public_html/index.html
+echo "<h3><center>You Can Also Contact Me at <a href="https://www.facebook.com/Gugun">Facebook</a> and <a href="https://twitter.com/Gugun09">Twitter</a></center></h3>" >> /home/vps/public_html/index.html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Nginx/vps.conf"
 service nginx restart
 
@@ -68,7 +68,7 @@ sed -i 's|export KEY_COUNTRY="US"|export KEY_COUNTRY="PH"|' /etc/openvpn/easy-rs
 sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="Manila"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Manila"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="ByteHAX"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="143Clarkz@gmail.com"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="gratisan009@gmail.com"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="ByteHAX"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="Gugun09"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_OU=changeme|export KEY_OU=Gugun09|' /etc/openvpn/easy-rsa/vars
