@@ -32,18 +32,15 @@ apt-get update
 # Install Essential Packages
 apt-get -y install nano iptables dnsutils openvpn screen whois ngrep unzip unrar
 
-echo "clear"                                                                          >> .bashrc
-echo 'echo -e "\e[0m                                                               "' >> .bashrc
-echo 'echo -e "\e[94m     ::::::::   :::         :::::::::   :::    :::  ::::::::: "' >> .bashrc
-echo 'echo -e "\e[94m    :+:    :+:  :+:         :+:    :+:  :+:   :+:        :+:  "' >> .bashrc
-echo 'echo -e "\e[94m    +:+         +:+         +:+    +:+  +:+  +:+        +:+   "' >> .bashrc
-echo 'echo -e "\e[94m    +#+         +#+         +#++:++#:   +#++:++        +#+    "' >> .bashrc
-echo 'echo -e "\e[94m    +#+         +#+         +#+    +#+  +#+  +#+      +#+     "' >> .bashrc
-echo 'echo -e "\e[94m    #+#    #+#  #+#         #+#    #+#  #+#   #+#    #+#      "' >> .bashrc
-echo 'echo -e "\e[94m     ########   ##########  ###    ###  ###    ###  ######### "' >> .bashrc
-echo 'echo -e "\e[0m"'                                                                >> .bashrc
-echo 'echo -e "\e[94m             [accounts/options/server]                        "' >> .bashrc
-echo 'echo -e "\e[0m                                                               "' >> .bashrc
+echo "clear"                                               >> .bashrc
+echo 'echo -e "\e[0m                                    "' >> .bashrc
+echo 'echo -e "\e[94m   ╔═╦═╦╗╔═╦══╗╔═╦═╦══╦╦╗╔═╦╦╦╦╦═╗	"' >> .bashrc
+echo 'echo -e "\e[94m	║╚╣║║║║║║║║║║╚╣║╠╗╔╣║║╚╗║║║║║║║	"' >> .bashrc
+echo 'echo -e "\e[94m	╠╗║╦║╚╣╦║║║║╠╗║╦║║║║║║╔╣║║║║║╦║	"' >> .bashrc
+echo 'echo -e "\e[94m	╚═╩╩╩═╩╩╩╩╩╝╚═╩╩╝╚╝╚═╝╚═╩╩══╩╩╝	"' >> .bashrc
+echo 'echo -e "\e[0m"'                                     >> .bashrc
+echo 'echo -e "\e[94m      [accounts/options/server]    "' >> .bashrc
+echo 'echo -e "\e[0m                                    "' >> .bashrc
 
 # Install WebServer
 apt-get -y install nginx

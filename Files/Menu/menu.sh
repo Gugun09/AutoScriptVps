@@ -1,17 +1,14 @@
 #!/bin/bash
 # Script by : Gugun09
 clear
-echo -e "\e[0m                                                               "
-echo -e "\e[94m     ::::::::   :::         :::::::::   :::    :::  ::::::::: "
-echo -e "\e[94m    :+:    :+:  :+:         :+:    :+:  :+:   :+:        :+:  "
-echo -e "\e[94m    +:+         +:+         +:+    +:+  +:+  +:+        +:+   "
-echo -e "\e[94m    +#+         +#+         +#++:++#:   +#++:++        +#+    "
-echo -e "\e[94m    +#+         +#+         +#+    +#+  +#+  +#+      +#+     "
-echo -e "\e[94m    #+#    #+#  #+#         #+#    #+#  #+#   #+#    #+#      "
-echo -e "\e[94m     ########   ##########  ###    ###  ###    ###  ######### "
-echo -e "\e[0m                                                               "
-echo -e "\e[94m             [accounts/options/server]                        "
-echo -e "\e[0m                                                               "
+echo 'echo -e "\e[0m                                    "
+echo 'echo -e "\e[94m   ╔═╦═╦╗╔═╦══╗╔═╦═╦══╦╦╗╔═╦╦╦╦╦═╗	"
+echo 'echo -e "\e[94m	║╚╣║║║║║║║║║║╚╣║╠╗╔╣║║╚╗║║║║║║║	"
+echo 'echo -e "\e[94m	╠╗║╦║╚╣╦║║║║╠╗║╦║║║║║║╔╣║║║║║╦║	"
+echo 'echo -e "\e[94m	╚═╩╩╩═╩╩╩╩╩╝╚═╩╩╝╚╝╚═╝╚═╩╩══╩╩╝	"
+echo 'echo -e "\e[0m									"                                   
+echo 'echo -e "\e[94m      [accounts/options/server]    "
+echo 'echo -e "\e[0m                                    "
 # Color
 BLUE='\033[0;34m'
 GREEN='\033[0;32m'
