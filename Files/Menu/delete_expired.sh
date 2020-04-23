@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Clrkz
+# Script by : Gugun09
 datenow=$(date +%s)
 for user in $(awk -F: '{print $1}' /etc/passwd); do
 expdate=$(chage -l $user|awk -F: '/Account expires/{print $2}')

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Clrkz
+# Script by : Gugun09
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"

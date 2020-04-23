@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Clrkz
+# Script by : Gugun09
 echo "echo 3 > /proc/sys/vm/drop_caches"
 clear
 echo -e "\e[0m                                                   "

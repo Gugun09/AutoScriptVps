@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Clrkz
+# Script by : Gugun09
 Username=`cat /etc/passwd | grep -Ew ^$1 | cut -d":" -f1`
 if [ "$Username" = "" ]
 then

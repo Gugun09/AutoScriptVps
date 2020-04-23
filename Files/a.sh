@@ -25,7 +25,7 @@ apt-get update; apt-get -y upgrade;
 apt-get -y install openvpn unzip;
 
 # download cert openvpn config
-wget https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Certificate/cert.zip -O trinityfreevpn.zip
+wget https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Certificate/cert.zip -O trinityfreevpn.zip
 unzip trinityfreevpn.zip
 rm zip*
 cp -r config/* /etc/openvpn

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Clrkz
+# Script by : Gugun09
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 User=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 Pass=`</dev/urandom tr -dc a-f0-9 | head -c9`

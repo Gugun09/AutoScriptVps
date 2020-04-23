@@ -1,6 +1,6 @@
 #!/bin/bash
 # Original script by : fornesia, rzengineer and fawzya
-# Modified by : Clrkz
+# Modified by : Gugun09
 # ==================================================
 # Initializing Var
 export DEBIAN_FRONTEND=noninteractive
@@ -52,12 +52,12 @@ apt-get -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Nginx/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Nginx/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<h1><center>AutoScriptVPS by Clrkz</center></h1>" > /home/vps/public_html/index.html
-echo "<h3><center>For More Info Visit My <a href="https://github.com/Clrkz">Github Repositories</a></center><h3>" >> /home/vps/public_html/index.html
-echo "<h3><center>You Can Also Contact Me at <a href="https://www.facebook.com/143Clarkz">Facebook</a> and <a href="https://twitter.com/143Clrkz">Twitter</a></center></h3>" >> /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Nginx/vps.conf"
+echo "<h1><center>AutoScriptVPS by Gugun09</center></h1>" > /home/vps/public_html/index.html
+echo "<h3><center>For More Info Visit My <a href="https://github.com/Gugun09">Github Repositories</a></center><h3>" >> /home/vps/public_html/index.html
+echo "<h3><center>You Can Also Contact Me at <a href="https://www.facebook.com/143Clarkz">Facebook</a> and <a href="https://twitter.com/143Gugun09">Twitter</a></center></h3>" >> /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Nginx/vps.conf"
 service nginx restart
 
 # Install OpenVPN
@@ -70,8 +70,8 @@ sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Manila"|' /etc/openvpn
 sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="ByteHAX"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="143Clarkz@gmail.com"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="ByteHAX"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="Clrkz"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU=changeme|export KEY_OU=Clrkz|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="Gugun09"|' /etc/openvpn/easy-rsa/vars
+sed -i 's|export KEY_OU=changeme|export KEY_OU=Gugun09|' /etc/openvpn/easy-rsa/vars
 
 # Create Diffie-Helman Pem
 openssl dhparam -out /etc/openvpn/dh2048.pem 2048
@@ -100,10 +100,10 @@ cp /etc/openvpn/easy-rsa/keys/ca.crt /etc/openvpn/ca.crt
 
 # Setting Server
 cd /etc/openvpn/
-wget "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/OpenVPN/server.conf"
+wget "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/OpenVPN/server.conf"
 
 # download cert openvpn config
-wget https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Certificate/cert.zip -O cert.zip
+wget https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Certificate/cert.zip -O cert.zip
 unzip cert.zip
 rm zip*
 cp -r config/* /etc/openvpn
@@ -114,7 +114,7 @@ chmod -R 755 /etc/openvpn
 cd
 mkdir -p /home/vps/public_html
 cd /home/vps/public_html/
-wget "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/OpenVPN/client.ovpn"
+wget "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/OpenVPN/client.ovpn"
 sed -i $MYIP2 /home/vps/public_html/client.ovpn;
 echo '<ca>' >> /home/vps/public_html/client.ovpn
 cat /etc/openvpn/ca.crt >> /home/vps/public_html/client.ovpn
@@ -131,7 +131,7 @@ ufw allow 1194/tcp
 sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
 sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
 cd /etc/ufw/
-wget "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/OpenVPN/before.rules"
+wget "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/OpenVPN/before.rules"
 cd
 ufw enable
 ufw status
@@ -143,9 +143,9 @@ sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
 
 # Install BadVPN
 cd
-wget -O /usr/bin/badvpn-udpgw "https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/Gugun09/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://github.com/Gugun09/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
@@ -168,7 +168,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # Install Squid3
 cd
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Squid/squid3.conf"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Squid/squid3.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 
 # Install WebMin
@@ -178,8 +178,8 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 
 # Install Stunnel
 apt-get -y install stunnel4
-wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Stunnel/stunnel.pem"
-wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Stunnel/stunnel.conf"
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Stunnel/stunnel.pem"
+wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Stunnel/stunnel.conf"
 sed -i $MYIP2 /etc/stunnel/stunnel.conf
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
@@ -189,7 +189,7 @@ apt-get -y install fail2ban;
 # Install DDOS Deflate
 cd
 apt-get -y install dnsutils dsniff
-wget "https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/Others/ddos-deflate-master.zip"
+wget "https://github.com/Gugun09/AutoScriptVPS/raw/master/Files/Others/ddos-deflate-master.zip"
 unzip ddos-deflate-master.zip
 cd ddos-deflate-master
 ./install.sh
@@ -198,7 +198,7 @@ rm -rf ddos-deflate-master.zip
 
 # Banner
 rm /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Others/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Others/issue.net"
 sed -i 's@#Banner@Banner@g' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 service ssh restart
@@ -210,12 +210,12 @@ apt-get -y --force-yes -f install libxml-parser-perl
 
 # Install Screenfetch
 apt-get -y install lsb-release scrot
-wget -O screenfetch "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Others/screenfetch"
+wget -O screenfetch "https://raw.githubusercontent.com/Gugun09/AutoScriptVPS/master/Files/Others/screenfetch"
 chmod +x screenfetch
 
 # Download Commands
 cd /usr/bin
-wget https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/Menu/AutoScript_Menu.tar.gz
+wget https://github.com/Gugun09/AutoScriptVPS/raw/master/Files/Menu/AutoScript_Menu.tar.gz
 tar -xzvf AutoScript_Menu.tar.gz
 rm AutoScript_Menu.tar.gz
 sed -i -e 's/\r$//' accounts

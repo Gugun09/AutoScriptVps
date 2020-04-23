@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : Clrkz
+# Script by : Gugun09
 if [ -f /etc/debian_version ]; then
 	UIDN=1000
 elif [ -f /etc/redhat-release ]; then
